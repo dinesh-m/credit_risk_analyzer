@@ -75,20 +75,21 @@ Referring to the results of confusion matrix and classification report of both t
 - The higher percentage values of Precision (100%) and Recall (99%) show the biasedness of the both the models towards the majority class ('0' healthy loans).
 - The reliability of positive classification is pretty high looking at the Precision values (100% for '1' TPs and relatively less FPs of 85% for '1') in imbalanced data model.
 
-- The balanced_accuracy_score of oversampled data is higher than that of original data based logistic regression model (0.9936781215845847 vs. 0.9520479254722232). But it can be misleading at this stage to conclude the better performance of oversampled data model until we compare precision and recall scores too.
+- The balanced_accuracy_score of resampled data is higher than that of original data based logistic regression model (0.9936781215845847 vs. 0.9520479254722232). But it can be misleading at this stage to conclude the better performance of resampled data model until we compare precision and recall scores too.
 
-- Comparing the two models with the precision for the 1 class - The model that used the imbalanced data produced a precision of 0.85. The model that used the oversampled data produced a precision of 0.84. So, the logistic regression model that used the original data did slightly better at making predictions for the 1 class (high-risk loan).
-- Comparing the two models with the recall for the 1 class - The model that used the imbalanced data produced a recall of 0.91. The model that used the oversampled data produced a recall of 0.99. So, the model that used the oversampled data was dramatically more accurate at predicting high risk loans. That is, if we compare 612.81 ('support value' 619 * 0.99) to 615 (TNs in the confusion matrix), it looks the oversampled data model will predict True Negative close to 615 better than the model with original data.
+- Comparing the two models with the precision for the 1 class - The model that used the imbalanced data produced a precision of 0.85. The model that used the resampled data produced a precision of 0.84. So, the logistic regression model that used the original data did slightly better at making predictions for the 1 class (high-risk loan).
+- Comparing the two models with the recall for the 1 class - The model that used the imbalanced data produced a recall of 0.91. The model that used the resampled data produced a recall of 0.99. So, the model that used the resampled data was dramatically more accurate at predicting high risk loans. That is, if we compare 612.81 ('support value' 619 * 0.99) to 615 (TNs in the confusion matrix), it looks the resampled data model will predict True Negative close to 615 better than the model with original data.
 
 **Summary**
 
 Referring to the results of confusion matrix and classification report of both the models above, the findings can be summarized as below.
-- The higher percentage values of Precision (100%) and Recall (99%) show the biasedness of the model towards the majority class ('0' healthy loans). 
-- The balanced_accuracy_score of oversampled data is higher than that of original data based logistic regression model (0.9936781215845847 vs. 0.9520479254722232). But it can be misleading at this stage to conclude the better performance of oversampled data model until we compare precision and recall scores too.
-- Comparing the two models with the precision for the 1 class - The model that used the imbalanced data produced a precision of 0.85. The model that used the oversampled data produced a precision of 0.84. So, the logistic regression model that used the original data did slightly better at making predictions for the 1 class (high-risk loan).
-- Comparing the two models with the recall for the 1 class - The model that used the imbalanced data produced a recall of 0.91. The model that used the oversampled data produced a recall of 0.99. So, the model that used the oversampled data was dramatically more accurate at predicting high risk loans. That is, if we compare 612.81 ('support value' 619 * 0.99) to 615 (TNs in the confusion matrix), it looks the oversampled data model will predict True Negative close to 615 better than the model with original data.
 
-Hence, **oversampled data model** is recommended, as our objective is to identify more accurately high-risk loans to customers.
+- The higher percentage values of Precision (100%) and Recall (99%) show the biasedness of the model towards the majority class ('0' healthy loans). 
+- The balanced_accuracy_score of resampled data is higher than that of original data based logistic regression model (0.9936781215845847 vs. 0.9520479254722232). But it can be misleading at this stage to conclude the better performance of resampled data model until we compare precision and recall scores too.
+- Comparing the two models with the precision for the 1 class - The model that used the imbalanced data produced a precision of 0.85. The model that used the resampled data produced a precision of 0.84. So, the logistic regression model that used the original data did slightly better at making predictions for the 1 class (high-risk loan).
+- Comparing the two models with the recall for the 1 class - The model that used the imbalanced data produced a recall of 0.91. The model that used the resampled data produced a recall of 0.99. So, the model that used the resampled data was dramatically more accurate at predicting high risk loans. That is, if we compare 612.81 ('support value' 619 * 0.99) to 615 (TNs in the confusion matrix), it looks the resampled data model will predict True Negative close to 615 better than the model with original data.
+
+Hence, **resampled data model** is recommended, as our objective is to identify more accurately high-risk loans to customers.
 
 ---
 
